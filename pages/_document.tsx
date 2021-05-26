@@ -9,7 +9,15 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <meta property="og:title" content="pfdzm's personal website" />
+          <meta property="og:image" content="/assets/personal-website.png" />
+          <meta
+            property="og:description"
+            content="This is my personal website - enjoy :)"
+          />
+          <meta property="og:url" content="https://www.pfdzm.me/" />
+        </Head>
         <body>
           <Main />
           <NextScript />
