@@ -1,23 +1,10 @@
 import Head from 'next/head'
 import 'tailwindcss/tailwind.css'
 import Layout from '../components/Layout'
-import { createClient, Provider } from 'urql'
-
-const GH_PAT = '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'
-
-const client = createClient({
-  url: 'https://api.github.com/graphql',
-  fetchOptions: () => {
-    const token = GH_PAT
-    return {
-      headers: { authorization: token ? `Bearer ${token}` : '' },
-    }
-  },
-})
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider value={client}>
+    <>
       <Head>
         <meta name="description" content="pfdzm's personal website" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -29,7 +16,7 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </Provider>
+    </>
   )
 }
 
