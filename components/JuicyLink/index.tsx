@@ -12,7 +12,7 @@ export default function JuicyLink({
   return (
     <Link href={href}>
       <a
-        className="flex items-center px-5 py-2 rounded shadow text-xl sm:text-3xl font-bold bg-amber-50 text-rose-400 mr-5 hover:text-blue-500 transition-all transform-gpu hover:scale-105"
+        className="flex items-center px-5 py-2 rounded shadow text-xl sm:text-3xl font-bold bg-amber-50 text-gray-800 mr-5 hover:text-rose-400 transition-all transform-gpu hover:scale-105"
         target={external ? '_blank' : undefined}
         rel="noopener noreferrer"
       >

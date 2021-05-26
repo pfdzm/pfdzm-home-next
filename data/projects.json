@@ -47,7 +47,7 @@
     "title": "CodeQuiz",
     "slug": "codequiz",
     "img": {
-      "url": "/assets/cooknbook.png",
+      "url": "/assets/codequiz.png",
       "alt": "code quiz screenshot"
     },
     "description": "A simple quiz app to test your coding chops! Includes an easy and a 'hard' mode. Built with vanilla JS, HTML and CSS (Bootstap).",

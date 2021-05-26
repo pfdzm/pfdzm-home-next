@@ -11,16 +11,16 @@ export default function NavItem({
   const { asPath } = useRouter()
   const isActive = href === asPath
   return (
-    <li>
+    <div>
       <Link href={href}>
         <a
           className={`text-2xl lg:text-3xl font-extrabold transition-all hover:bg-amber-50 bg-opacity-20 px-3 py-1 rounded ${
-            isActive ? 'font-semibold' : null
+            isActive ? 'text-blue-500 hidden' : null
           }`}
         >
           {children}
         </a>
       </Link>
-    </li>
+    </div>
   )
 }

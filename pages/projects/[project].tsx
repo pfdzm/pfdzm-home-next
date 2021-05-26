@@ -29,26 +29,34 @@ export default function Project({ project }: Props) {
         <title>pfdzm | {project.title}</title>
       </Head>
       <Content>
-        <button className="mb-3">
-          <Link href="/projects">
-            <a className="bg-amber-50 rounded shadow hover:text-blue-500 text-rose-400 font-extrabold">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={3}
-                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                />
-              </svg>
-            </a>
-          </Link>
-        </button>
+        <div className="-mt-3">
+          <button
+            aria-roledescription="return to projects overview"
+            aria-label="button"
+            role="button"
+            className="mb-3"
+          >
+            <Link href="/projects">
+              <a className="hover:text-rose-400 text-gray-800 font-extrabold flex items-center text-xl w-32 hover:scale-105 transform-gpu transition-all">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 flex-grow-0 mr-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={3.5}
+                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                  />
+                </svg>
+                <span>Back</span>
+              </a>
+            </Link>
+          </button>
+        </div>
         <div className="flex mb-9 flex-col items-center sm:flex-row sm:items-start">
           <div className="sm:mr-9">
             <div className="mb-6">
