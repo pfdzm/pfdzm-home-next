@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import cn from 'classnames'
 
 export default function NavItem({
   children,
@@ -14,9 +15,18 @@ export default function NavItem({
     <div>
       <Link href={href}>
         <a
-          className={`text-2xl lg:text-3xl font-extrabold transition-all hover:bg-amber-50 bg-opacity-20 px-3 py-1 rounded ${
-            isActive ? 'text-blue-500 hidden' : null
-          }`}
+          className={cn(
+            'text-2xl',
+            'lg:text-3xl',
+            'font-extrabold',
+            'transition-all',
+            'hover:bg-amber-50',
+            'bg-opacity-20',
+            'px-3',
+            'py-1',
+            'rounded',
+            { hidden: isActive }
+          )}
         >
           {children}
         </a>
