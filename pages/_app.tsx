@@ -6,6 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <title>pfdzm</title>
         <meta name="description" content="pfdzm's personal website" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
