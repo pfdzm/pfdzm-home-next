@@ -22,7 +22,7 @@ export default function Projects() {
           deployed app.
         </Paragraph>
         <div className="flex flex-wrap justify-around">
-          {projects.map(({ title, slug, img }) => {
+          {projects.slice(0, 6).map(({ title, slug, img }) => {
             return (
               <div key={slug}>
                 <Link href={`/projects/${slug}`}>

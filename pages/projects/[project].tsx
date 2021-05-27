@@ -19,6 +19,7 @@ type Props = {
     description: string
     repo: string
     deploy: string
+    technologies: string[]
   }
 }
 
@@ -64,7 +65,8 @@ export default function Project({ project }: Props) {
             </div>
             <Paragraph>{project.description}</Paragraph>
           </div>
-          <div className="justify-center flex-grow-0 flex-shrink-0">
+
+          <div className="justify-center flex-grow-0 flex-shrink-0 flex flex-col">
             <Image
               className="rounded"
               src={project.img.url}
@@ -74,6 +76,7 @@ export default function Project({ project }: Props) {
             />
           </div>
         </div>
+
         <div className="flex justify-around">
           <JuicyLink href={project.repo}>
             <svg
@@ -110,13 +113,28 @@ export default function Project({ project }: Props) {
             <span>Live Demo</span>
           </JuicyLink>
         </div>
+        <div className="flex-grow-0 flex-shrink-0 py-9 text-gray-800 text-xs font-bold">
+          <div className="mb-3">
+            <h2 className="font-extrabold text-2xl">Tech Stack</h2>
+          </div>
+          <ul className="flex justify-around items-center flex-wrap">
+            {project.technologies.map((tech, key) => (
+              <li
+                className="py-3 px-6 bg-amber-50 shadow rounded transform-gpu scale-105"
+                key={key}
+              >
+                {tech}
+              </li>
+            ))}
+          </ul>
+        </div>
       </Content>
     </>
   )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = projects.map((project) => ({
+  const paths = projects.slice(0, 6).map((project) => ({
     params: {
       project: project.slug,
     },
