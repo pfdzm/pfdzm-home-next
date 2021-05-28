@@ -29,10 +29,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </nav>
       </header>
-      <main className="flex-grow rounded bg-white shadow bg-opacity-30 md:px-5 px-3 mb-5">
+      <main className="flex-grow rounded-xl shadow-md bg-white bg-opacity-30 md:px-5 px-3 mb-5">
         {children}
       </main>
-      <footer className="flex-grow-0 flex justify-center rounded font-semibold text-amber-50 py-3">
+      <footer className="flex-grow-0 flex justify-center font-semibold text-amber-50 py-3">
         Made with&nbsp;
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -12,23 +12,33 @@ export default function Home() {
       </div>
       <div>
         <Paragraph>
-          I am a Fullstack Software Engineer based in Berlin, Germany. I hail
-          from Madrid, Spain but have lived in Berlin since 2009. I currently
-          work for Enpal GmbH in the Marketing & Sales Tech (aka Growth Tech)
-          team, helping to build and scale the future of green tech. I love
-          games, music, cycling, and languages.
+          I am a Fullstack Software Engineer based in Berlin, Germany.
+          Originally from Madrid, Spain, but have called myself a Berliner since
+          2009. I currently work for Enpal GmbH in the Marketing & Sales Tech
+          (Growth Tech) team, building the future of green tech.
         </Paragraph>
         <Paragraph>
-          I fell in love with technology at a young age, building hobby websites
-          for my hobbies (duh!), my friends and my family. I ended up studying
-          Civil Engineering at the Berlin Institute of Technology (TU Berlin)
-          and working various jobs before enrolling in a 6-month Fullstack Web
-          Dev bootcamp. I absolutely love coding!
+          My love affair with technology started at a young age - building hobby
+          websites and hacking around fixing, upgrading and (of course) breaking
+          any systems I had at my disposal. My educational background is in
+          Civil Engineering and have professional experience in varied (usually
+          customer-facing) roles. My strong suit is a deep curiosity for how
+          things work paired with strong communication skills.
         </Paragraph>
         <Paragraph>
-          I love learning new things (I often read Wikipedia for fun!) and am
-          not afraid to tackle new, exciting challenges. If you want to reach
-          me, you can do so on GitHub or LinkedIn:
+          Most of my programming experience to-date is related to fullstack web
+          development and, while I specialize in frontend work at my day job, I
+          certainly do not shy away from backend related tasks. DevOps and
+          infrastructure are two special interests of mine, and I make a special
+          effort to continue learning in that area and sharing my knowledge with
+          colleagues. I have done presentations at Enpal's bi-weekly
+          Tech/Architecture meeting related to CI/CD and Infrastructure-as-Code
+          (on Azure).
+        </Paragraph>
+        <Paragraph>
+          I generally love learning new things (I <em>very</em> often read
+          Wikipedia for fun!) and am not afraid to tackle new challenges. If you
+          want to reach me, you can do so on GitHub or LinkedIn:
         </Paragraph>
       </div>
       <div className="flex">

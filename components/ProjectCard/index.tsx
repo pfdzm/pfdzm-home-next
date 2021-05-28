@@ -10,12 +10,12 @@ export default function ProjectCard({
   return (
     <div className="ml-3 md:ml-6">
       <Link href={`/projects/${slug}`}>
-        <a className="bg-gradient-to-tr from-rose-100 hover:from-rose-50 min-w-xs hover:to-amber-50 rounded shadow flex flex-col items-center text-3xl text-center font-bold text-gray-800 hover:text-rose-400 transition-all transform-gpu hover:scale-105 mb-5">
+        <a className="bg-gradient-to-tr from-rose-100 hover:from-rose-50 min-w-xs hover:to-amber-50 rounded-xl shadow-md hover:shadow-xl flex flex-col items-center text-3xl text-center font-bold text-gray-800 hover:text-rose-400 transition-all transform-gpu hover:scale-105 mb-5">
           <div className="relative w-full">
             <div className="mb-4 h-40 w-full">
               <Image // 384 x 288
                 layout="fill"
-                className="rounded-tr rounded-tl relative z-0"
+                className="rounded-tr-xl rounded-tl-xl relative z-0"
                 src={img.url}
                 alt={img.alt}
                 objectFit="cover"

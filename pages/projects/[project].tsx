@@ -22,18 +22,18 @@ export default function Project({ project }: Props) {
         <title>pfdzm | {project.title}</title>
       </Head>
       <Content>
-        <div className="-mt-3 mb-3">
+        <div className="-mt-3 mb-6">
           <BackButton />
         </div>
-        <div className="flex mb-9 flex-col-reverse items-center md:flex-row md:items-start">
+        <div className="flex flex-col-reverse items-center md:flex-row md:items-start">
           <div className="md:mb-0 w-full">
             <div className="mb-6">
               <Heading>{project.title}</Heading>
             </div>
             <div className="float-right w-full max-w-24 md:ml-6  mb-6">
-              <div className="mb-6 flex justify-center relative h-56">
+              <div className="mb-6 flex justify-center relative h-56 rounded-xl shadow-md">
                 <Image
-                  className="rounded flex-grow-0"
+                  className="rounded-xl flex-grow-0"
                   src={project.img.url}
                   alt={project.img.alt}
                   // width="320"
@@ -43,7 +43,7 @@ export default function Project({ project }: Props) {
                   layout="fill"
                 />
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between mb-6">
                 <div>
                   <JuicyLink href={project.repo} external>
                     <svg
@@ -83,28 +83,30 @@ export default function Project({ project }: Props) {
                   </JuicyLink>
                 </div>
               </div>
-            </div>
-            {project.description.map((desc, key) => (
-              <Paragraph key={key}>{desc}</Paragraph>
-            ))}
-
-            <div className="flex-grow-0 flex-shrink-0 text-gray-800 text-xs font-bold">
-              <div className="mb-3">
-                <h2 className="font-extrabold text-2xl">Tech Stack</h2>
+              <div className="flex-grow-0 flex-shrink-0 text-gray-800 text-xs font-bold">
+                <div className="mb-3">
+                  <h2 className="font-extrabold text-2xl">Tech Stack</h2>
+                </div>
+                <ul className="flex justify-start -ml-3 md:-ml-6 items-center flex-wrap w-full">
+                  {project.technologies.map((tech, key) => (
+                    <li
+                      className="ml-3 md:ml-6 flex flex-col items-center"
+                      key={key}
+                    >
+                      <div className="h-6 w-6 md:h-8 md:w-8 mb-3">
+                        <TechIcon tech={tech} />
+                      </div>
+                      <div>{tech}</div>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="flex justify-start -ml-3 md:-ml-6 items-center flex-wrap">
-                {project.technologies.map((tech, key) => (
-                  <li
-                    className="mb-3 ml-3 md:ml-6 flex flex-col items-center"
-                    key={key}
-                  >
-                    <div className="h-6 w-6 md:h-8 md:w-8 mb-3">
-                      <TechIcon tech={tech} />
-                    </div>
-                    <div>{tech}</div>
-                  </li>
-                ))}
-              </ul>
+            </div>
+            <div>
+              <h2 className="font-extrabold text-2xl">About</h2>
+              {project.description.map((desc, key) => (
+                <Paragraph key={key}>{desc}</Paragraph>
+              ))}
             </div>
           </div>
         </div>
