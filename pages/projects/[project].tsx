@@ -26,15 +26,67 @@ export default function Project({ project }: Props) {
           <BackButton />
         </div>
         <div className="flex mb-9 flex-col-reverse items-center md:flex-row md:items-start">
-          <div className="md:mr-6 md:mb-0">
-            <div className="md:mr-9">
-              <div className="mb-6">
-                <Heading>{project.title}</Heading>
-              </div>
-              {project.description.map((desc, key) => (
-                <Paragraph key={key}>{desc}</Paragraph>
-              ))}
+          <div className="md:mb-0 w-full">
+            <div className="mb-6">
+              <Heading>{project.title}</Heading>
             </div>
+            <div className="float-right w-full max-w-24 md:ml-6  mb-6">
+              <div className="mb-6 flex justify-center relative h-56">
+                <Image
+                  className="rounded flex-grow-0"
+                  src={project.img.url}
+                  alt={project.img.alt}
+                  // width="320"
+                  // height="250"
+                  objectFit="cover"
+                  objectPosition="top center"
+                  layout="fill"
+                />
+              </div>
+              <div className="flex justify-between">
+                <div>
+                  <JuicyLink href={project.repo} external>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 mr-3"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                      />
+                    </svg>
+                    <span>Code</span>
+                  </JuicyLink>
+                </div>
+                <div className="ml-3">
+                  <JuicyLink href={project.deploy} external>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 mr-3"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                    <span>Live Demo</span>
+                  </JuicyLink>
+                </div>
+              </div>
+            </div>
+            {project.description.map((desc, key) => (
+              <Paragraph key={key}>{desc}</Paragraph>
+            ))}
 
             <div className="flex-grow-0 flex-shrink-0 text-gray-800 text-xs font-bold">
               <div className="mb-3">
@@ -53,62 +105,6 @@ export default function Project({ project }: Props) {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-
-          <div className="flex-grow-0 flex-shrink-0 mb-6">
-            <div className="mb-6 flex justify-center relative h-56">
-              <Image
-                className="rounded flex-grow-0"
-                src={project.img.url}
-                alt={project.img.alt}
-                // width="320"
-                // height="250"
-                objectFit="cover"
-                objectPosition="top center"
-                layout="fill"
-              />
-            </div>
-
-            <div className="flex justify-between">
-              <div>
-                <JuicyLink href={project.repo} external>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 mr-3"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                    />
-                  </svg>
-                  <span>Code</span>
-                </JuicyLink>
-              </div>
-              <div className="ml-3">
-                <JuicyLink href={project.deploy} external>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 mr-3"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                  </svg>
-                  <span>Live Demo</span>
-                </JuicyLink>
-              </div>
             </div>
           </div>
         </div>

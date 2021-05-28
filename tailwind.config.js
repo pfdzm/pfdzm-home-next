@@ -34,9 +34,11 @@ module.exports = {
     },
     maxWidth: {
       xs: '256px',
+      24: '24rem',
     },
     minWidth: {
       xs: '256px',
+      24: '24rem',
     },
     extend: {},
   },
