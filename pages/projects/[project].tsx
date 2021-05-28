@@ -1,14 +1,13 @@
+import BackButton from 'components/BackButton'
 import Content from 'components/Content'
 import Heading from 'components/Heading'
 import JuicyLink from 'components/JuicyLink'
 import Paragraph from 'components/Paragraph'
 import projects from 'data/projects.json'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
-import Head from 'next/head'
 import dynamic from 'next/dynamic'
-// import TechIcon from 'components/TechIcon'
+import Head from 'next/head'
+import Image from 'next/image'
 const TechIcon = dynamic(() => import('components/TechIcon'))
 
 type Props = {
@@ -34,32 +33,7 @@ export default function Project({ project }: Props) {
       </Head>
       <Content>
         <div className="-mt-3">
-          <button
-            aria-roledescription="return to projects overview"
-            aria-label="button"
-            role="button"
-            className="mb-3"
-          >
-            <Link href="/projects">
-              <a className="hover:text-rose-400 text-gray-800 font-extrabold flex items-center text-xl w-32 hover:scale-105 transform-gpu transition-all">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 flex-grow-0 mr-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={3.5}
-                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                  />
-                </svg>
-                <span>Back</span>
-              </a>
-            </Link>
-          </button>
+          <BackButton />
         </div>
         <div className="flex mb-9 flex-col-reverse items-center md:flex-row md:items-start">
           <div className="md:mr-6 md:mb-0">
