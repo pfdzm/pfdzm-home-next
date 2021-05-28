@@ -72,7 +72,7 @@ export default function Project({ project }: Props) {
 
             <div className="flex justify-between">
               <div>
-                <JuicyLink href={project.repo}>
+                <JuicyLink href={project.repo} external>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 mr-3"
@@ -91,7 +91,7 @@ export default function Project({ project }: Props) {
                 </JuicyLink>
               </div>
               <div className="ml-3">
-                <JuicyLink href={project.deploy}>
+                <JuicyLink href={project.deploy} external>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 mr-3"
