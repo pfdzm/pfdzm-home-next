@@ -2,6 +2,7 @@ import Content from 'components/Content'
 import Heading from 'components/Heading'
 import JuicyLink from 'components/JuicyLink'
 import Paragraph from 'components/Paragraph'
+import TechIcon from 'components/TechIcon'
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <div className="mb-6">
         <Heading>Hi, I'm Pablo</Heading>
       </div>
-      <div className="mb-6">
+      <div>
         <Paragraph>
           I am a Fullstack Software Engineer based in Berlin, Germany. I hail
           from Madrid, Spain but have lived in Berlin since 2009. I currently
@@ -31,12 +32,24 @@ export default function Home() {
         </Paragraph>
       </div>
       <div className="flex">
-        <JuicyLink href="https://github.com/pfdzm" external>
-          GitHub
-        </JuicyLink>
-        <JuicyLink href="https://www.linkedin.com/in/pablofdezm/" external>
-          LinkedIn
-        </JuicyLink>
+        <div className="mr-6">
+          <JuicyLink href="https://github.com/pfdzm" external>
+            <TechIcon
+              className="w-6 h-6 md:w-8 md:h-8 inline-block mr-2 md:mr-3"
+              tech={'GitHub'}
+            />
+            <span>GitHub</span>
+          </JuicyLink>
+        </div>
+        <div>
+          <JuicyLink href="https://www.linkedin.com/in/pablofdezm/" external>
+            <TechIcon
+              className="w-6 h-6 md:w-8 md:h-8 inline-block mr-3 md:mr-6"
+              tech={'LinkedIn'}
+            />
+            LinkedIn
+          </JuicyLink>
+        </div>
       </div>
     </Content>
   )

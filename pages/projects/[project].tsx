@@ -7,6 +7,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
+import TechIcon from 'components/TechIcon'
 
 type Props = {
   project: {
@@ -58,75 +59,88 @@ export default function Project({ project }: Props) {
             </Link>
           </button>
         </div>
-        <div className="flex mb-9 flex-col items-center sm:flex-row sm:items-start">
-          <div className="sm:mr-9">
-            <div className="mb-6">
-              <Heading>{project.title}</Heading>
+        <div className="flex mb-9 flex-col-reverse items-center md:flex-row md:items-start">
+          <div className="md:mr-6 md:mb-0">
+            <div className="md:mr-9">
+              <div className="mb-6">
+                <Heading>{project.title}</Heading>
+              </div>
+              <Paragraph>{project.description}</Paragraph>
             </div>
-            <Paragraph>{project.description}</Paragraph>
+
+            <div className="flex-grow-0 flex-shrink-0 text-gray-800 text-xs font-bold">
+              <div className="mb-3">
+                <h2 className="font-extrabold text-2xl">Tech Stack</h2>
+              </div>
+              <ul className="flex justify-start -ml-3 md:-ml-6 items-center flex-wrap">
+                {project.technologies.map((tech, key) => (
+                  <li
+                    // className="mb-3 ml-3 md:ml-6 py-2 px-4 md:py-3 md:px-6 bg-gradient-to-tr from-rose-200 to-amber-50 shadow rounded transform-gpu scale-105 flex flex-col items-center"
+                    className="mb-3 ml-3 md:ml-6 py-1 px-2 md:py-2 md:px-4 flex flex-col items-center"
+                    key={key}
+                  >
+                    <div className="h-6 w-6 md:h-8 md:w-8 mb-3">
+                      <TechIcon tech={tech} />
+                    </div>
+                    <div>{tech}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="justify-center flex-grow-0 flex-shrink-0 flex flex-col">
-            <Image
-              className="rounded"
-              src={project.img.url}
-              alt={project.img.alt}
-              width="320"
-              height="250"
-            />
-          </div>
-        </div>
+          <div className="flex-grow-0 flex-shrink-0 mb-6">
+            <div className="justify-center flex-grow-0 flex-shrink-0 flex flex-col mb-6">
+              <Image
+                className="rounded"
+                src={project.img.url}
+                alt={project.img.alt}
+                width="320"
+                height="250"
+              />
+            </div>
 
-        <div className="flex justify-around">
-          <JuicyLink href={project.repo}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 mr-3"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-              />
-            </svg>
-            <span>Code</span>
-          </JuicyLink>
-          <JuicyLink href={project.deploy}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 mr-3"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-            <span>Live Demo</span>
-          </JuicyLink>
-        </div>
-        <div className="flex-grow-0 flex-shrink-0 py-9 text-gray-800 text-xs font-bold">
-          <div className="mb-3">
-            <h2 className="font-extrabold text-2xl">Tech Stack</h2>
+            <div className="flex justify-between">
+              <div>
+                <JuicyLink href={project.repo}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 mr-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    />
+                  </svg>
+                  <span>Code</span>
+                </JuicyLink>
+              </div>
+              <div className="ml-3">
+                <JuicyLink href={project.deploy}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 mr-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                  <span>Live Demo</span>
+                </JuicyLink>
+              </div>
+            </div>
           </div>
-          <ul className="flex justify-around items-center flex-wrap">
-            {project.technologies.map((tech, key) => (
-              <li
-                className="py-3 px-6 bg-amber-50 shadow rounded transform-gpu scale-105"
-                key={key}
-              >
-                {tech}
-              </li>
-            ))}
-          </ul>
         </div>
       </Content>
     </>
