@@ -28,7 +28,7 @@
     ],
     "repo": "https://github.com/pfdzm/doenate.git",
     "deploy": "https://doner.vercel.app/",
-    "technologies": ["JavaScript", "React.js", "TailwindCSS", "Stripe"]
+    "technologies": ["JavaScript", "React", "TailwindCSS", "Stripe"]
   },
   {
     "title": "pfdzm Home",
@@ -42,7 +42,7 @@
     ],
     "repo": "https://github.com/pfdzm/pfdzm-home.git",
     "deploy": "https://pfdzm.netlify.app/",
-    "technologies": ["JavaScript", "React.js", "GraphQL", "Gatsby.js"]
+    "technologies": ["JavaScript", "React", "GraphQL", "Gatsby"]
   },
   {
     "title": "CookNBook",
@@ -112,7 +112,7 @@
     ],
     "repo": "https://github.com/pfdzm/burger.git",
     "deploy": "https://pfdzm-eat-da-burger.herokuapp.com/",
-    "technologies": ["JavaScript", "React.js", "TailwindCSS", "Stripe"]
+    "technologies": ["JavaScript", "React", "TailwindCSS", "Stripe"]
   },
   {
     "title": "Workout Tracker",
@@ -126,6 +126,6 @@
     ],
     "repo": "https://github.com/pfdzm/workout-tracker.git",
     "deploy": "https://pfdzm-workout-tracker.herokuapp.com/",
-    "technologies": ["JavaScript", "React.js", "TailwindCSS", "Stripe"]
+    "technologies": ["JavaScript", "React", "TailwindCSS", "Stripe"]
   }
 ]

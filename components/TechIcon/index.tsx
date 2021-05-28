@@ -53,7 +53,7 @@ function getIconComponent(tech: string) {
       return <AngularIcon />
     case 'CSS':
       return <CSSIcon />
-    case 'Gatsby.js':
+    case 'Gatsby':
       return <GatsbysIcon />
     case 'HTML':
       return <HTMLIcon />
@@ -61,7 +61,7 @@ function getIconComponent(tech: string) {
       return <MongoDBIcon />
     case 'Next.js':
       return <NextJSIcon />
-    case 'React.js':
+    case 'React':
       return <ReactJSIcon />
     case 'GraphQL':
       return <GraphQLIcon />
