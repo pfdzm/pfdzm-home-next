@@ -7,7 +7,9 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
-import TechIcon from 'components/TechIcon'
+import dynamic from 'next/dynamic'
+// import TechIcon from 'components/TechIcon'
+const TechIcon = dynamic(() => import('components/TechIcon'))
 
 type Props = {
   project: {
@@ -90,7 +92,7 @@ export default function Project({ project }: Props) {
           </div>
 
           <div className="flex-grow-0 flex-shrink-0 mb-6">
-            <div className="justify-center flex-grow-0 flex-shrink-0 flex flex-col mb-6">
+            <div className="mb-6">
               <Image
                 className="rounded"
                 src={project.img.url}
