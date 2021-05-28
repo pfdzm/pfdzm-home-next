@@ -12,7 +12,7 @@ export default function NavItem({
   const { asPath } = useRouter()
   const isActive = href === asPath
   return (
-    <div>
+    <div className="flex">
       <Link href={href}>
         <a
           className={cn(
@@ -20,11 +20,17 @@ export default function NavItem({
             'lg:text-3xl',
             'font-extrabold',
             'transition-all',
-            'hover:bg-amber-50',
-            'bg-opacity-20',
             'px-3',
             'py-1',
             'rounded',
+            'bg-gradient-to-tr',
+            'from-transparent',
+            'to-transparent',
+            'hover:from-rose-100',
+            'hover:to-amber-50',
+            'hover:shadow',
+            'transform-gpu',
+            'hover:scale-105',
             { hidden: isActive }
           )}
         >

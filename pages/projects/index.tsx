@@ -26,9 +26,10 @@ export default function Projects() {
             return (
               <div key={slug}>
                 <Link href={`/projects/${slug}`}>
-                  <a className="bg-amber-50 py-6 px-3 rounded shadow flex flex-col items-center text-3xl text-center font-bold text-gray-800 hover:text-rose-400 transition-all transform-gpu hover:scale-105 mb-5">
+                  <a className="bg-gradient-to-tr from-rose-100 to-amber-50 py-6 px-3 rounded shadow flex flex-col items-center text-3xl text-center font-bold text-gray-800 hover:text-rose-400 transition-all transform-gpu hover:scale-105 mb-5">
                     <div className="mb-4">
                       <Image // 384 x 288
+                        className="rounded"
                         src={img.url}
                         alt={img.alt}
                         width="384"
