@@ -21,7 +21,7 @@ export default function NavItem({
             'text-2xl',
             'lg:text-3xl',
             'font-extrabold',
-            'transition-all',
+            'transition-transform',
             'rounded-xl',
             'bg-gradient-to-tr',
             'from-transparent',

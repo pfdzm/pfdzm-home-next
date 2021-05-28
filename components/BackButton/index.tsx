@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 const className =
-  'bg-gradient-to-tr from-rose-100 to-amber-50 px-4 py-2 md:px-6 md:py-3 rounded-xl shadow-md hover:shadow-xl hover:text-rose-400 text-gray-800 font-extrabold flex items-center text-xl w-32 hover:scale-105 transform-gpu transition-all'
+  'bg-gradient-to-tr from-rose-100 to-amber-50 px-4 py-2 md:px-6 md:py-3 rounded-xl shadow-md hover:shadow-xl hover:text-rose-400 text-gray-800 font-extrabold flex items-center text-xl w-32 hover:scale-105 transform-gpu transition-transform'
 
 export default function BackButton() {
   const router = useRouter()
