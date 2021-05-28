@@ -12,4 +12,7 @@ module.exports = {
 
     return config
   },
+  future: {
+    webpack5: true,
+  },
 }
