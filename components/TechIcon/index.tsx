@@ -1,27 +1,29 @@
-import Image from 'next/image'
-// import JavaScriptIcon from 'public/assets/icons/javascript.svg'
 import dynamic from 'next/dynamic'
 
 const JavaScriptIcon = dynamic(
   () => import('public/assets/icons/javascript.svg')
 )
-import TypeScriptIcon from 'public/assets/icons/typescript.svg'
-import AngularIcon from 'public/assets/icons/angular.svg'
-import CSSIcon from 'public/assets/icons/css3.svg'
-import GatsbysIcon from 'public/assets/icons/gatsby.svg'
-import HTMLIcon from 'public/assets/icons/html5.svg'
-import MongoDBIcon from 'public/assets/icons/mongodb.svg'
-import NextJSIcon from 'public/assets/icons/next-dot-js.svg'
-import ReactJSIcon from 'public/assets/icons/react.svg'
-import GraphQLIcon from 'public/assets/icons/graphql.svg'
-import BootstrapIcon from 'public/assets/icons/bootstrap.svg'
-import TailwindCSSIcon from 'public/assets/icons/tailwindcss.svg'
-import FirebaseIcon from 'public/assets/icons/firebase.svg'
-import StripeIcon from 'public/assets/icons/stripe.svg'
-import LeafletJSIcon from 'public/assets/icons/leaflet.svg'
-import LinkedInIcon from 'public/assets/icons/linkedin.svg'
-import GitHubIcon from 'public/assets/icons/github.svg'
-import MapboxIcon from 'public/assets/icons/mapbox.svg'
+const TypeScriptIcon = dynamic(
+  () => import('public/assets/icons/typescript.svg')
+)
+const AngularIcon = dynamic(() => import('public/assets/icons/angular.svg'))
+const CSSIcon = dynamic(() => import('public/assets/icons/css3.svg'))
+const GatsbysIcon = dynamic(() => import('public/assets/icons/gatsby.svg'))
+const HTMLIcon = dynamic(() => import('public/assets/icons/html5.svg'))
+const MongoDBIcon = dynamic(() => import('public/assets/icons/mongodb.svg'))
+const NextJSIcon = dynamic(() => import('public/assets/icons/next-dot-js.svg'))
+const ReactJSIcon = dynamic(() => import('public/assets/icons/react.svg'))
+const GraphQLIcon = dynamic(() => import('public/assets/icons/graphql.svg'))
+const BootstrapIcon = dynamic(() => import('public/assets/icons/bootstrap.svg'))
+const TailwindCSSIcon = dynamic(
+  () => import('public/assets/icons/tailwindcss.svg')
+)
+const FirebaseIcon = dynamic(() => import('public/assets/icons/firebase.svg'))
+const StripeIcon = dynamic(() => import('public/assets/icons/stripe.svg'))
+const LeafletJSIcon = dynamic(() => import('public/assets/icons/leaflet.svg'))
+const LinkedInIcon = dynamic(() => import('public/assets/icons/linkedin.svg'))
+const GitHubIcon = dynamic(() => import('public/assets/icons/github.svg'))
+const MapboxIcon = dynamic(() => import('public/assets/icons/mapbox.svg'))
 
 type Props = {
   tech: string
@@ -29,18 +31,7 @@ type Props = {
 }
 
 export default function TechIcon({ tech, className }: Props) {
-  return (
-    <div className={className}>
-      {getIconComponent(tech)}
-      {/* <Image
-        className="pointer-events-none"
-        width="100%"
-        height="100%"
-        src={getLogo(tech)}
-        alt={`${tech} logo`}
-      /> */}
-    </div>
-  )
+  return <div className={className}>{getIconComponent(tech)}</div>
 }
 
 function getIconComponent(tech: string) {
