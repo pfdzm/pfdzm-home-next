@@ -6,7 +6,12 @@
       "url": "/assets/covid-data-info.png",
       "alt": "covid-data.info screenshot"
     },
-    "description": "covid-data.info was a project started by a group of volunteers at the start of the Coronavirus pandemic. The goal was to enable users to log their symptoms each day, and use this (anonymized) data to better inform governments and other oragnizations of the current situation. As part of the tech team, I collaborated with developers of various skill levels and backgrounds from all over the world. Our tech stack was Angular for the frontend and a Firebase backend. We had weekly meetings to discuss progress and next steps, and required contributions be made through pull requests. My role was especially focused on the frontend as well as DevOps - a special focus of mine was the responsive design of the website. Unfortunately, I had to leave the team after a few months due to other things taking up more time in my life - in this time, much of the UI was redone in a (sadly) non-responsive, non-mobile friendly way. If I had the chance to participate in such a project again, I would definitely invest in setting up unit and integration tests, as well as visual snapshot tests, to avoid such regressions from sneaking in.",
+    "description": [
+      "covid-data.info was a project started by a group of volunteers at the start of the Coronavirus pandemic. The goal was to enable users to log their symptoms each day, and use this (anonymized) data to better inform governments and other oragnizations of the current situation.",
+      "As part of the tech team, I collaborated with developers of various skill levels and backgrounds from all over the world. Our tech stack was Angular for the frontend and a Firebase backend. We had weekly meetings to discuss progress and next steps, and required contributions be made through pull requests.",
+      "My role was especially focused on the frontend as well as DevOps - a special focus of mine was the responsive design of the website. Unfortunately, I had to leave the team after a few months due to other things taking up more time in my life - in this time, much of the UI was redone in a (sadly) non-responsive, non-mobile friendly way.",
+      "If I had the chance to participate in such a project again, I would definitely invest in setting up unit and integration tests, as well as visual snapshot tests, to avoid such regressions from sneaking in."
+    ],
     "repo": "https://github.com/covid-data-team/covid-data-website-",
     "deploy": "https://covid-data.info/",
     "technologies": ["TypeScript", "Angular", "Firebase"]
@@ -18,7 +23,9 @@
       "url": "/assets/doenate.png",
       "alt": "doenate screenshot"
     },
-    "description": "Help Berlin, Dönate a Döner! Simple web app built with React (incl. Hooks, Context API and reducers to handle state) and Stripe Checkout API to funnel donations to local Berlin charities. Offers one-time or subscription payments.",
+    "description": [
+      "Help Berlin, Dönate a Döner! Simple web app built with React (incl. Hooks, Context API and reducers to handle state) and Stripe Checkout API to funnel donations to local Berlin charities. Offers one-time or subscription payments."
+    ],
     "repo": "https://github.com/pfdzm/doenate.git",
     "deploy": "https://doner.vercel.app/",
     "technologies": ["JavaScript", "React.js", "TailwindCSS", "Stripe"]
@@ -30,7 +37,9 @@
       "url": "/assets/home.png",
       "alt": "homepage screenshot"
     },
-    "description": "My former homepage, displaying a bit of info about myself, as well as a collection of my most recent projects. Built with Gatsby (+ React), deployed on Netlify.",
+    "description": [
+      "My former homepage, displaying a bit of info about myself, as well as a collection of my most recent projects. Built with Gatsby (+ React), deployed on Netlify."
+    ],
     "repo": "https://github.com/pfdzm/pfdzm-home.git",
     "deploy": "https://pfdzm.netlify.app/",
     "technologies": ["JavaScript", "React.js", "GraphQL", "Gatsby.js"]
@@ -42,7 +51,9 @@
       "url": "/assets/cooknbook.png",
       "alt": "cooknbook screenshot"
     },
-    "description": "Developed for the first project week for the ESMT Berlin Coding Bootcamp. Working in a team of 3 and using GitHub to track issues and assign work. Cooknbook queries three different APIs to retrieve nearby restaurants, display them on a map and display alternative recipe ideas (in case you're on a budget!).",
+    "description": [
+      "Developed for the first project week for the ESMT Berlin Coding Bootcamp. Working in a team of 3 and using GitHub to track issues and assign work. Cooknbook queries three different APIs to retrieve nearby restaurants, display them on a map and display alternative recipe ideas (in case you're on a budget!)."
+    ],
     "repo": "https://github.com/dnedaniele/cooknbook.git",
     "deploy": "https://dnedaniele.github.io/cooknbook/",
     "technologies": ["HTML", "CSS", "JavaScript", "Leaflet.js", "Mapbox"]
@@ -54,7 +65,9 @@
       "url": "/assets/wordguessgame.png",
       "alt": "word-guess-game screenshot"
     },
-    "description": "A little hangman-like game built with vanilla JS, HTML and CSS. Hacker theme.",
+    "description": [
+      "A little hangman-like game built with vanilla JS, HTML and CSS. Hacker theme."
+    ],
     "repo": "https://github.com/pfdzm/Word-Guess-Game.git",
     "deploy": "https://pfdzm.github.io/Word-Guess-Game",
     "technologies": ["HTML", "CSS", "JavaScript"]
@@ -66,7 +79,9 @@
       "url": "/assets/codequiz.png",
       "alt": "code quiz screenshot"
     },
-    "description": "A simple quiz app to test your coding chops! Includes an easy and a 'hard' mode. Built with vanilla JS, HTML and CSS (Bootstap).",
+    "description": [
+      "A simple quiz app to test your coding chops! Includes an easy and a 'hard' mode. Built with vanilla JS, HTML and CSS (Bootstap)."
+    ],
     "repo": "https://github.com/pfdzm/Code-Quiz.git",
     "deploy": "https://pfdzm.github.io/Code-Quiz/",
     "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"]
@@ -78,7 +93,9 @@
       "url": "/assets/weatherdashboard.png",
       "alt": "weather dashboard screenshot"
     },
-    "description": "A weather dashboard built using vanilla JS, HTML and CSS (Bootstrap). Uses the Open Weather API to query for data, displays on a LeafletJS map using Mapbox tiles.",
+    "description": [
+      "A weather dashboard built using vanilla JS, HTML and CSS (Bootstrap). Uses the Open Weather API to query for data, displays on a LeafletJS map using Mapbox tiles."
+    ],
     "repo": "https://github.com/pfdzm/Weather-Dashboard.git",
     "deploy": "https://pfdzm.github.io/Weather-Dashboard/",
     "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"]
@@ -90,7 +107,9 @@
       "url": "/assets/eat-da-burger.png",
       "alt": "eat-da-burger screenshot"
     },
-    "description": "A very simple app to utilize the full stack: backend in NodeJS, Server in Express, Persistence/Models in MySQL, Handlebars for the frontend.",
+    "description": [
+      "A very simple app to utilize the full stack: backend in NodeJS, Server in Express, Persistence/Models in MySQL, Handlebars for the frontend."
+    ],
     "repo": "https://github.com/pfdzm/burger.git",
     "deploy": "https://pfdzm-eat-da-burger.herokuapp.com/",
     "technologies": ["JavaScript", "React.js", "TailwindCSS", "Stripe"]
@@ -102,7 +121,9 @@
       "url": "/assets/workouttracker.png",
       "alt": "workout tracker screenshot"
     },
-    "description": "A full-stack workout tracker deployed on Heroku. Uses Mongoose + MongoDB for persistence.",
+    "description": [
+      "A full-stack workout tracker deployed on Heroku. Uses Mongoose + MongoDB for persistence."
+    ],
     "repo": "https://github.com/pfdzm/workout-tracker.git",
     "deploy": "https://pfdzm-workout-tracker.herokuapp.com/",
     "technologies": ["JavaScript", "React.js", "TailwindCSS", "Stripe"]

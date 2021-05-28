@@ -19,7 +19,7 @@ type Props = {
       url: string
       alt: string
     }
-    description: string
+    description: string[]
     repo: string
     deploy: string
     technologies: string[]
@@ -67,7 +67,9 @@ export default function Project({ project }: Props) {
               <div className="mb-6">
                 <Heading>{project.title}</Heading>
               </div>
-              <Paragraph>{project.description}</Paragraph>
+              {project.description.map((desc, key) => (
+                <Paragraph key={key}>{desc}</Paragraph>
+              ))}
             </div>
 
             <div className="flex-grow-0 flex-shrink-0 text-gray-800 text-xs font-bold">
@@ -77,8 +79,7 @@ export default function Project({ project }: Props) {
               <ul className="flex justify-start -ml-3 md:-ml-6 items-center flex-wrap">
                 {project.technologies.map((tech, key) => (
                   <li
-                    // className="mb-3 ml-3 md:ml-6 py-2 px-4 md:py-3 md:px-6 bg-gradient-to-tr from-rose-200 to-amber-50 shadow rounded transform-gpu scale-105 flex flex-col items-center"
-                    className="mb-3 ml-3 md:ml-6 py-1 px-2 md:py-2 md:px-4 flex flex-col items-center"
+                    className="mb-3 ml-3 md:ml-6 flex flex-col items-center"
                     key={key}
                   >
                     <div className="h-6 w-6 md:h-8 md:w-8 mb-3">
@@ -92,9 +93,9 @@ export default function Project({ project }: Props) {
           </div>
 
           <div className="flex-grow-0 flex-shrink-0 mb-6">
-            <div className="mb-6">
+            <div className="mb-6 flex justify-center">
               <Image
-                className="rounded"
+                className="rounded flex-grow-0"
                 src={project.img.url}
                 alt={project.img.alt}
                 width="320"
