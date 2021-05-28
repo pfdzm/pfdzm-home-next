@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const theme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -40,6 +41,7 @@ module.exports = {
       xs: '256px',
       24: '24rem',
     },
+    ...theme,
     extend: {},
   },
   variants: {
