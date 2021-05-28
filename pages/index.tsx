@@ -32,7 +32,7 @@ export default function Home() {
         </Paragraph>
       </div>
       <div className="flex">
-        <div className="mr-6">
+        <div className="mr-3 md:mr-6">
           <JuicyLink href="https://github.com/pfdzm" external>
             <TechIcon
               className="w-6 h-6 md:w-8 md:h-8 inline-block mr-2 md:mr-3"

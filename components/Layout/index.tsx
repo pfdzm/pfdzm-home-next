@@ -4,8 +4,8 @@ import NavItem from 'components/NavItem'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="font-body flex flex-col min-h-screen mx-auto md:px-10 px-3 bg-gradient-to-t from-rose-400 to-amber-50 text-gray-800 text-lg">
-      <header className="text-blue-500 transition-colors text-5xl flex-grow-0 py-3 md:py-6">
+    <div className="font-body flex flex-col min-h-screen mx-auto md:px-10 px-1 bg-gradient-to-t from-rose-400 to-amber-50 text-gray-800 text-lg">
+      <header className="text-blue-500 transition-colors text-5xl flex-grow-0 pt-6 pb-3 md:pb-6">
         <nav className="flex flex-col md:flex-row items-center">
           <div className="hover:text-rose-400 transition-all pb-6 md:pb-0">
             <Link href="/">

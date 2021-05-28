@@ -32,10 +32,18 @@ module.exports = {
         'Noto Color Emoji',
       ],
     },
+    maxWidth: {
+      xs: '256px',
+    },
+    minWidth: {
+      xs: '256px',
+    },
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      visibility: ['hover', 'focus'],
+    },
   },
   plugins: [],
 }

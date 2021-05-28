@@ -3,6 +3,7 @@ import Content from 'components/Content'
 import Heading from 'components/Heading'
 import JuicyLink from 'components/JuicyLink'
 import Paragraph from 'components/Paragraph'
+import { ProjectDataType } from 'components/ProjectCard/types'
 import projects from 'data/projects.json'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import dynamic from 'next/dynamic'
@@ -11,18 +12,7 @@ import Image from 'next/image'
 const TechIcon = dynamic(() => import('components/TechIcon'))
 
 type Props = {
-  project: {
-    title: string
-    slug: string
-    img: {
-      url: string
-      alt: string
-    }
-    description: string[]
-    repo: string
-    deploy: string
-    technologies: string[]
-  }
+  project: ProjectDataType
 }
 
 export default function Project({ project }: Props) {
@@ -32,7 +22,7 @@ export default function Project({ project }: Props) {
         <title>pfdzm | {project.title}</title>
       </Head>
       <Content>
-        <div className="-mt-3">
+        <div className="-mt-3 mb-3">
           <BackButton />
         </div>
         <div className="flex mb-9 flex-col-reverse items-center md:flex-row md:items-start">
@@ -67,13 +57,16 @@ export default function Project({ project }: Props) {
           </div>
 
           <div className="flex-grow-0 flex-shrink-0 mb-6">
-            <div className="mb-6 flex justify-center">
+            <div className="mb-6 flex justify-center relative h-56">
               <Image
                 className="rounded flex-grow-0"
                 src={project.img.url}
                 alt={project.img.alt}
-                width="320"
-                height="250"
+                // width="320"
+                // height="250"
+                objectFit="cover"
+                objectPosition="top center"
+                layout="fill"
               />
             </div>
 
