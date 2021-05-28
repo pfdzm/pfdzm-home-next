@@ -5,6 +5,7 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    ...theme,
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -41,7 +42,7 @@ module.exports = {
       xs: '256px',
       24: '24rem',
     },
-    ...theme,
+
     extend: {},
   },
   variants: {
