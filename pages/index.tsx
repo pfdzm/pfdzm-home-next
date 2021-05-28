@@ -36,9 +36,9 @@ export default function Home() {
           (on Azure).
         </Paragraph>
         <Paragraph>
-          I generally love learning new things (I <em>very</em> often read
-          Wikipedia for fun!) and am not afraid to tackle new challenges. If you
-          want to reach me, you can do so on GitHub or LinkedIn:
+          I generally love learning new things (I very often read Wikipedia for
+          fun!) and am not afraid to tackle new challenges. If you want to reach
+          me, you can do so on GitHub or LinkedIn:
         </Paragraph>
       </div>
       <div className="flex">
