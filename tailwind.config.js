@@ -2,7 +2,15 @@ const colors = require('tailwindcss/colors')
 const theme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: {
+    content: [
+      './pages/**/*.{js,ts,jsx,tsx}',
+      './components/**/*.{js,ts,jsx,tsx}',
+    ],
+    options: {
+      safeList: ['transition-transform'],
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     ...theme,
