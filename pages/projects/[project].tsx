@@ -34,7 +34,7 @@ export default function Project({ project }: Props) {
               {/* <div className="mb-6">
                 <h2 className="font-extrabold text-2xl">Screenshot</h2>
               </div> */}
-              <div className="mb-6 flex justify-center relative h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 rounded-xl shadow-md">
+              <div className="mb-9 flex justify-center relative h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 rounded-xl shadow-md">
                 <Image
                   className="rounded-xl flex-grow-0"
                   src={project.img.url}
