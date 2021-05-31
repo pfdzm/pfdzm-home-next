@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const { maxWidth, minWidth } = require('tailwindcss/defaultTheme')
 const theme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -43,10 +44,15 @@ module.exports = {
       ],
     },
     maxWidth: {
+      ...maxWidth,
       xs: '256px',
       24: '24rem',
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
     },
     minWidth: {
+      ...minWidth,
       xs: '256px',
       24: '24rem',
     },

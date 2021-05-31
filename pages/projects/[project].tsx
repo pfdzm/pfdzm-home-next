@@ -22,16 +22,19 @@ export default function Project({ project }: Props) {
         <title>pfdzm | {project.title}</title>
       </Head>
       <Content>
-        <div className="-mt-3 mb-6">
+        <div className="-mt-3 mb-9">
           <BackButton />
         </div>
         <div className="flex flex-col-reverse items-center md:flex-row md:items-start">
           <div className="md:mb-0 w-full">
-            <div className="mb-6">
+            <div className="mb-9">
               <Heading>{project.title}</Heading>
             </div>
-            <div className="float-right w-full max-w-24 md:ml-6  mb-6">
-              <div className="mb-6 flex justify-center relative h-56 rounded-xl shadow-md">
+            <div className="w-full sm:w-1/2 float-right mb-6 ml-0 sm:ml-6 md:ml-9 md:mb-9">
+              {/* <div className="mb-6">
+                <h2 className="font-extrabold text-2xl">Screenshot</h2>
+              </div> */}
+              <div className="mb-6 flex justify-center relative h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 rounded-xl shadow-md">
                 <Image
                   className="rounded-xl flex-grow-0"
                   src={project.img.url}
@@ -43,7 +46,7 @@ export default function Project({ project }: Props) {
                   layout="fill"
                 />
               </div>
-              <div className="flex justify-between mb-6">
+              <div className="flex mb-9">
                 <div>
                   <JuicyLink href={project.repo} external>
                     <svg
@@ -79,14 +82,14 @@ export default function Project({ project }: Props) {
                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                       />
                     </svg>
-                    <span>Live Demo</span>
+                    <span>Demo</span>
                   </JuicyLink>
                 </div>
               </div>
-              <div className="flex-grow-0 flex-shrink-0 text-gray-800 text-xs font-bold">
-                <div className="mb-3">
+              <div className="flex-grow-0 flex-shrink-0 text-gray-800 text-xs font-bold mb-3">
+                {/* <div className="mb-6">
                   <h2 className="font-extrabold text-2xl">Tech Stack</h2>
-                </div>
+                </div> */}
                 <ul className="flex justify-start -ml-3 md:-ml-6 items-center flex-wrap w-full">
                   {project.technologies.map((tech, key) => (
                     <li
@@ -103,10 +106,14 @@ export default function Project({ project }: Props) {
               </div>
             </div>
             <div>
-              <h2 className="font-extrabold text-2xl">About</h2>
-              {project.description.map((desc, key) => (
-                <Paragraph key={key}>{desc}</Paragraph>
-              ))}
+              {/* <div className="mb-6">
+                <h2 className="font-extrabold text-2xl">About</h2>
+              </div> */}
+              <div>
+                {project.description.map((desc, key) => (
+                  <Paragraph key={key}>{desc}</Paragraph>
+                ))}
+              </div>
             </div>
           </div>
         </div>
