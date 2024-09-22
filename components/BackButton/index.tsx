@@ -20,10 +20,8 @@ export default function BackButton() {
       <BackButtonContent />
     </button>
   ) : (
-    <Link href="/projects">
-      <a className={className}>
-        <BackButtonContent />
-      </a>
+    <Link href="/projects" className={className}>
+      <BackButtonContent />
     </Link>
   )
 }

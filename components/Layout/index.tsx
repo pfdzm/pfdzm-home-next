@@ -8,19 +8,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="text-blue-500 text-5xl flex-grow-0 pt-6 pb-3 md:pb-6">
         <nav className="flex flex-col md:flex-row items-center">
           <div className="hover:text-rose-400 pb-6 md:pb-0">
-            <Link href="/">
-              <a className="flex items-start font-extrabold">
-                <div className="w-14 h-14 mr-5">
-                  <Image
-                    alt="picture of Pablo"
-                    className="rounded-full"
-                    src="/assets/me.jpg"
-                    width="100%"
-                    height="100%"
-                  />
-                </div>
-                <div>pfdzm</div>
-              </a>
+            <Link href="/" className="flex items-start font-extrabold">
+              <div className="w-14 h-14 mr-5">
+                <Image
+                  alt="picture of Pablo"
+                  className="rounded-full"
+                  src="/assets/me.jpg"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div>pfdzm</div>
             </Link>
           </div>
           <div className="md:ml-auto text-base space-x-3 text-rose-400 flex">

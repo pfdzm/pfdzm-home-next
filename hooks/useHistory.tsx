@@ -1,3 +1,4 @@
+import { MittEmitter } from 'next/dist/shared/lib/mitt'
 import { useRouter } from 'next/router'
 import { useContext, createContext, useEffect, useState } from 'react'
 
