@@ -1,4 +1,4 @@
-import Image from "next/legacy/image"
+import Image from "next/image"
 import Link from 'next/link'
 import { ProjectDataType } from './types'
 
@@ -12,16 +12,16 @@ export default function ProjectCard({
       <Link href={`/projects/${slug}`} className="bg-gradient-to-tr from-rose-100 hover:from-rose-50 min-w-xs hover:to-amber-50 rounded-xl shadow-md hover:shadow-xl flex flex-col items-center text-3xl text-center font-bold text-gray-800 hover:text-rose-400 mb-5">
         <div className="relative w-full">
           <div className="mb-4 h-40 w-full">
-            <Image // 384 x 288
-              layout="fill"
+            <Image
               className="rounded-tr-xl rounded-tl-xl relative z-0"
               src={img.url}
               alt={img.alt}
-              objectFit="cover"
-              objectPosition="center top"
-            // width="384"
-            // height="288"
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center top"
+              }} />
           </div>
         </div>
         <div className="bg-opacity-0 bg-amber-50 z-10 w-full py-6 px-3">
@@ -29,5 +29,5 @@ export default function ProjectCard({
         </div>
       </Link>
     </div>
-  )
+  );
 }

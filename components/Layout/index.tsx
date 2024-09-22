@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from "next/legacy/image"
+import Image from "next/image"
 import NavItem from 'components/NavItem'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -16,7 +16,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   src="/assets/me.jpg"
                   width="400"
                   height="400"
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               </div>
               <div>pfdzm</div>
             </Link>
@@ -47,5 +50,5 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         ️ in Berlin
       </footer>
     </div>
-  )
+  );
 }

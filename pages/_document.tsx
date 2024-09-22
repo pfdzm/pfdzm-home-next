@@ -10,6 +10,11 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+          />
           <meta property="og:title" content="pfdzm's personal website" />
           <meta
             property="og:image"
