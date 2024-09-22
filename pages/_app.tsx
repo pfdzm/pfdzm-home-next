@@ -1,4 +1,4 @@
-import { HistoryManagerProvider, useHistoryManager } from 'hooks/useHistory'
+import { HistoryManagerProvider } from 'hooks/useHistory'
 import Head from 'next/head'
 import 'tailwindcss/tailwind.css'
 import Layout from '../components/Layout'

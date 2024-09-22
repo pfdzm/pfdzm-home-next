@@ -1,5 +1,9 @@
-module.exports = {
-  webpack: (config, _options) => {
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+  output: "export",
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: [
@@ -11,8 +15,10 @@ module.exports = {
     })
     return config
   },
-  future: {
-    webpack5: true,
-  },
   reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  }
 }
+
+module.exports = nextConfig

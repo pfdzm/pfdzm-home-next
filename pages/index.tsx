@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Content>
       <div className="mb-6">
-        <Heading>Hi, I'm Pablo</Heading>
+        <Heading>Hi, I&apos;m Pablo</Heading>
       </div>
       <div>
         <Paragraph>
@@ -31,7 +31,7 @@ export default function Home() {
           certainly do not shy away from backend related tasks. DevOps and
           infrastructure are two special interests of mine, and I make a special
           effort to continue learning in that area and sharing my knowledge with
-          colleagues. I have done presentations at Enpal's bi-weekly
+          colleagues. I have done presentations at Enpal&apos;s bi-weekly
           Tech/Architecture meeting related to CI/CD and Infrastructure-as-Code
           (on Azure).
         </Paragraph>
